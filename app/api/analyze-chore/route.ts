@@ -85,7 +85,7 @@ Be specific about what you see and focus on effort and improvement.`;
       analysis = JSON.parse(aiResponse);
     } catch (parseError) {
       console.error('Failed to parse AI response:', aiResponse, parseError);
-      throw new Error('Invalid AI response format');
+      throw new Error('Invalid AI response format ');
     }
 
     // Validate the response structure
