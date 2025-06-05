@@ -60,6 +60,10 @@ Examples of good reasoning:
 
 Be specific about what you see and focus on effort and improvement.`;
 
+    console.log('🤖 Calling OpenAI with model: gpt-4o');
+    console.log('🖼️ Image URL:', imageUrl);
+    console.log('📝 Prompt length:', prompt.length);
+
     const response = await openai.chat.completions.create({
       model: "gpt-4o",
       messages: [
@@ -82,10 +86,21 @@ Be specific about what you see and focus on effort and improvement.`;
       response_format: { type: "json_object" }
     });
 
+    console.log('✅ OpenAI response received');
+    console.log('📊 Response structure:', {
+      choices: response.choices?.length,
+      firstChoice: response.choices?.[0] ? 'exists' : 'missing',
+      message: response.choices?.[0]?.message ? 'exists' : 'missing',
+      content: response.choices?.[0]?.message?.content ? 'exists' : 'missing'
+    });
+
     const aiResponse = response.choices[0]?.message?.content;
     if (!aiResponse) {
-      throw new Error('No response from AI');
+      console.error('❌ No AI response content. Full response:', JSON.stringify(response, null, 2));
+      throw new Error('No response from AI - check Vercel logs for details');
     }
+
+    console.log('🎯 AI Response:', aiResponse);
 
     let analysis;
     try {
