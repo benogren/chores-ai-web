@@ -39,28 +39,30 @@ export async function POST(request: NextRequest) {
 
     const prompt = `You are an AI assistant helping parents evaluate if their child has completed a chore. 
 
-Chore: "${choreName}"
-${choreDescription ? `Description: "${choreDescription}"` : ''}
+    Chore: "${choreName}"
+    ${choreDescription ? `Description: "${choreDescription}"` : ''}
 
-Please analyze this image and determine if the chore has been completed satisfactorily. Consider:
-- Age-appropriate standards (this is a child's work)
-- Reasonable effort has been made
-- The main objective of the chore has been achieved
-- Be encouraging but honest in your assessment
+    Please analyze this image and determine if the chore has been completed satisfactorily. Consider:
+    - Age-appropriate standards (this is a child's work)
+    - Reasonable effort has been made
+    - The main objective of the chore has been achieved
+    - Focus on the objective of the chore, not perfection (e.g., a bed made by a child may not be perfectly smooth, but it should look tidy)
+    - Look for key indicators of completion (e.g., toys put away, bed made, dishes cleaned)
+    - Be encouraging but honest in your assessment
 
-Respond with a JSON object containing:
-- isCompleted: boolean (true if reasonably completed)
-- confidence: number (0.0 to 1.0, your confidence in the assessment)
-- reasoning: string (brief, encouraging explanation of your decision)
+    Respond with a JSON object containing:
+    - isCompleted: boolean (true if reasonably completed)
+    - confidence: number (0.0 to 1.0, your confidence in the assessment)
+    - reasoning: string (brief, encouraging explanation of your decision)
 
-Examples of good reasoning:
-- "Great job! The room looks much tidier with toys put away and bed made."
-- "Good effort on cleaning, but there are still clothes on the floor that need to be picked up."
-- "Excellent work! The dishes are clean and properly put away."
-- "Nice start! The bed is made, but the toys still need to be organized."
-- "Well done! The trash has been taken out and the bin is clean."
+    Examples of good reasoning:
+    - "Great job! The room looks much tidier with toys put away and bed made."
+    - "Good effort on cleaning, but there are still clothes on the floor that need to be picked up."
+    - "Excellent work! The dishes are clean and properly put away."
+    - "Nice start! The bed is made, but the toys still need to be organized."
+    - "Well done! The trash has been taken out and the bin is clean."
 
-Be specific about what you see and focus on effort and improvement. Keep reasoning under 100 characters for better mobile display.`;
+    Be specific about what you see and focus on effort and improvement. Keep reasoning under 100 characters for better mobile display.`;
 
     console.log('🤖 Calling OpenAI with model: gpt-4o');
     console.log('🖼️ Image URL:', imageUrl);
