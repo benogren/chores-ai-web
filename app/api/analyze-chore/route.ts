@@ -26,7 +26,14 @@ export async function POST(request: NextRequest) {
     if (!imageUrl || !choreName) {
       return NextResponse.json(
         { error: 'Missing required fields: imageUrl and choreName' },
-        { status: 400 }
+        { 
+          status: 400,
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'POST, OPTIONS',
+            'Access-Control-Allow-Headers': 'Content-Type',
+          },
+        }
       );
     }
 
@@ -105,7 +112,13 @@ Be specific about what you see and focus on effort and improvement.`;
       analyzedAt: new Date().toISOString()
     };
 
-    return NextResponse.json(result);
+    return NextResponse.json(result, {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'POST, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type',
+      },
+    });
 
   } catch (error) {
     console.error('Error analyzing chore:', error);
@@ -117,7 +130,14 @@ Be specific about what you see and focus on effort and improvement.`;
     
     return NextResponse.json(
       { error: errorMessage },
-      { status: 500 }
+      { 
+        status: 500,
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'POST, OPTIONS',
+          'Access-Control-Allow-Headers': 'Content-Type',
+        },
+      }
     );
   }
 }
