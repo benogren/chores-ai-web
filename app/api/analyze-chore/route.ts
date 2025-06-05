@@ -47,7 +47,7 @@ export async function POST(request: NextRequest) {
     - Reasonable effort has been made
     - The main objective of the chore has been achieved
     - Focus on the objective of the chore, not perfection (e.g., a bed made by a child may not be perfectly smooth, but it should look tidy)
-    - Look for key indicators of completion (e.g., toys put away, bed made, dishes cleaned)
+    - Look for key indicators of completion (e.g., toys put away, bed made, dishes cleaned, floor is mostly clear)
     - Be encouraging but honest in your assessment
 
     Respond with a JSON object containing:
