@@ -46,7 +46,10 @@ export async function POST(request: NextRequest) {
     - Age-appropriate standards (this is a child's work)
     - Reasonable effort has been made
     - The main objective of the chore has been achieved
-    - Focus on the objective of the chore, not perfection (e.g., a bed made by a child may not be perfectly smooth, but it should look tidy)
+    - Focus on the objective of the chore, not perfection:
+      - A bed made by a child may not be perfectly smooth, but it should look tidy
+      - Taking the trash or recycling out means the bin is mostly empty, not spotless
+      - A cleaned room means things are put away, not every item is perfectly organized and the floor is mostly clear
     - Look for key indicators of completion (e.g., toys put away, bed made, dishes cleaned, floor is mostly clear)
     - Be encouraging but honest in your assessment
 
