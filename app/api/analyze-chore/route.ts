@@ -61,7 +61,7 @@ Examples of good reasoning:
 Be specific about what you see and focus on effort and improvement.`;
 
     const response = await openai.chat.completions.create({
-      model: "gpt-4-vision-preview",
+      model: "gpt-4o",
       messages: [
         {
           role: "user",
