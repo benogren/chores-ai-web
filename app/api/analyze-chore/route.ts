@@ -57,8 +57,10 @@ Examples of good reasoning:
 - "Great job! The room looks much tidier with toys put away and bed made."
 - "Good effort on cleaning, but there are still clothes on the floor that need to be picked up."
 - "Excellent work! The dishes are clean and properly put away."
+- "Nice start! The bed is made, but the toys still need to be organized."
+- "Well done! The trash has been taken out and the bin is clean."
 
-Be specific about what you see and focus on effort and improvement.`;
+Be specific about what you see and focus on effort and improvement. Keep reasoning under 100 characters for better mobile display.`;
 
     console.log('🤖 Calling OpenAI with model: gpt-4o');
     console.log('🖼️ Image URL:', imageUrl);
@@ -107,7 +109,7 @@ Be specific about what you see and focus on effort and improvement.`;
       analysis = JSON.parse(aiResponse);
     } catch (parseError) {
       console.error('Failed to parse AI response:', aiResponse, parseError);
-      throw new Error('Invalid AI response format ');
+      throw new Error('Invalid AI response format');
     }
 
     // Validate the response structure
@@ -120,12 +122,23 @@ Be specific about what you see and focus on effort and improvement.`;
     // Ensure confidence is between 0 and 1
     analysis.confidence = Math.max(0, Math.min(1, analysis.confidence));
     
+    // Ensure reasoning is not too long for mobile display
+    if (analysis.reasoning.length > 150) {
+      analysis.reasoning = analysis.reasoning.substring(0, 147) + '...';
+    }
+    
     const result: AnalysisResult = {
       isCompleted: analysis.isCompleted,
       confidence: analysis.confidence,
       reasoning: analysis.reasoning,
       analyzedAt: new Date().toISOString()
     };
+
+    console.log('📤 Sending result:', {
+      isCompleted: result.isCompleted,
+      confidence: `${Math.round(result.confidence * 100)}%`,
+      reasoningLength: result.reasoning.length
+    });
 
     return NextResponse.json(result, {
       headers: {
