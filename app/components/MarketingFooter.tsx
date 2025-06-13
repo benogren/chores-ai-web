@@ -4,8 +4,7 @@ import Image from 'next/image'
 const footerLinks = [
   { label: 'Privacy Policy', href: '/privacy' },
   { label: 'Terms of Service', href: '/terms' },
-  { label: 'Support', href: '/support' },
-  { label: 'Contact', href: '/contact' }
+  { label: 'Support', href: '/support' }
 ]
 
 export default function MarketingFooter() {
