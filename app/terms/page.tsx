@@ -7,8 +7,8 @@ export default function Terms() {
 
 
         <h2>1. Acceptance of Terms</h2>
-        <p>Welcome to ChoresAI! These Terms of Service ("Terms") govern your use of the ChoresAI mobile application and related services (collectively, the "Service") operated by ChoresAI ("we," "us," or "our").</p>
-        
+        <p>Welcome to ChoresAI! These Terms of Service (&quot;Terms&quot;) govern your use of the ChoresAI mobile application and related services (collectively, the &quot;Service&quot;) operated by ChoresAI (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;).</p>
+
         <p>By accessing or using our Service, you agree to be bound by these Terms. If you disagree with any part of these terms, then you may not access the Service.</p>
         <p><strong>Important:</strong> If you are under 18 years of age, you must have your parent or legal guardian read and accept these Terms on your behalf before using ChoresAI.</p>
 
@@ -36,8 +36,8 @@ export default function Terms() {
         <ul>
             <li><strong>Parents/Guardians:</strong> Must be 18 years or older to create a family account</li>
             <li><strong>Children:</strong> May use the Service under parental supervision with explicit parental consent</li>
-            <li>Parents are responsible for their children's use of the Service and compliance with these Terms</li>
-            <li>Parents may terminate their child's access to the Service at any time</li>
+            <li>Parents are responsible for their children&apos;s use of the Service and compliance with these Terms</li>
+            <li>Parents may terminate their children&apos;s access to the Service at any time</li>
         </ul>
 
         <h3>3.3 Family Accounts</h3>
@@ -146,7 +146,7 @@ export default function Terms() {
         
         <h3>10.1 Service Availability</h3>
         <ul>
-            <li>The Service is provided "as is" without warranties of any kind</li>
+            <li>The Service is provided &quot;as is&quot; without warranties of any kind</li>
             <li>We do not guarantee uninterrupted or error-free operation</li>
             <li>We may modify, suspend, or discontinue the Service at any time</li>
         </ul>
