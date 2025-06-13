@@ -58,22 +58,6 @@ export default function Header() {
                 Features
               </Link>
             </li>
-            <li>
-              <Link 
-                href="#pricing" 
-                className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-200"
-              >
-                Pricing
-              </Link>
-            </li>
-            <li>
-              <Link 
-                href="#contact" 
-                className="text-gray-700 font-medium hover:text-gray-900 transition-colors duration-200"
-              >
-                Contact
-              </Link>
-            </li>
           </ul>
           
           {/* App Store Buttons */}
