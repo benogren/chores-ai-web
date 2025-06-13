@@ -1,0 +1,79 @@
+@import "tailwindcss";
+@import "tailwindcss/utilities";
+
+:root {
+  --chores-purple: 166 102 217;
+  --chores-teal: 51 191 166;
+  --chores-green: 115 217 89;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.font-heading {
+    font-family: var(--font-varela-round), 'Varela Round', system-ui, sans-serif;
+  }
+
+  @layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* App Store Buttons */
+  .app-store-button {
+    @apply inline-flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-gray-800 hover:-translate-y-0.5;
+  }
+
+  .app-store-button.google-play {
+    @apply bg-green-600 hover:bg-green-700;
+  }
+
+  /* Primary Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-teal-600 text-white font-semibold rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-white text-gray-900 font-semibold rounded-xl border-2 border-gray-200 transition-all duration-300 hover:border-purple-500 hover:text-purple-600;
+  }
+
+  /* Social Proof Badge */
+  .social-proof-badge {
+    @apply inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-2 text-sm font-medium text-gray-600;
+  }
+
+  /* Feature Cards */
+  .feature-card {
+    @apply bg-white border border-gray-100 rounded-2xl p-6 transition-all duration-300 hover:border-gray-200 hover:shadow-lg;
+  }
+
+  /* Benefit Cards */
+  .benefit-card {
+    @apply bg-gray-50 rounded-2xl p-8 text-center transition-all duration-300 hover:bg-gray-100 hover:-translate-y-1;
+  }
+
+  /* Testimonial Cards */
+  .testimonial-card {
+    @apply bg-white/5 border border-white/10 rounded-2xl p-6 transition-all duration-300 hover:bg-white/10 hover:-translate-y-1;
+  }
+
+  /* Phone Mockup */
+  .phone-mockup {
+    @apply relative w-72 h-[580px] bg-black rounded-[2.5rem] p-5 shadow-2xl;
+  }
+
+  .phone-screen {
+    @apply w-full h-full rounded-[1.5rem] overflow-hidden bg-white;
+  }
+}
