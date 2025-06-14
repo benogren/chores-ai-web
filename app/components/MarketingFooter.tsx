@@ -4,7 +4,7 @@ import Image from 'next/image'
 const footerLinks = [
   { label: 'Privacy Policy', href: '/privacy' },
   { label: 'Terms of Service', href: '/terms' },
-  { label: 'Support', href: '/support' }
+  { label: 'Support', href: 'mailto:support@chores-ai.com' }
 ]
 
 export default function MarketingFooter() {
