@@ -1,5 +1,6 @@
 // import Link from 'next/link'
 import Image from 'next/image'
+import Waitlist from './Waitlist'
 
 export default function Hero() {
   return (
@@ -32,6 +33,8 @@ export default function Hero() {
               Snap a photo, scan progress, or track completion and get instant 
               payment and responsibility building.
             </p>
+
+            <Waitlist />
 
             {/* App Store Buttons */}
             {/* <div className="flex gap-4 pt-4">

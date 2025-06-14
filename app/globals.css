@@ -21,6 +21,17 @@ body {
     overflow-x: hidden;
 }
 
+#getWaitlistContainer {
+  padding: 0rem;
+  margin-left: -20px;
+  margin-top: -20px;
+  text-align: center;
+}
+#getWaitlistContainer button {
+  @apply bg-gradient-to-br from-purple-600 to-teal-600;
+  font-family: var(--font-varela-round), 'Varela Round', system-ui, sans-serif;
+}
+
 .font-heading {
     font-family: var(--font-varela-round), 'Varela Round', system-ui, sans-serif;
   }
