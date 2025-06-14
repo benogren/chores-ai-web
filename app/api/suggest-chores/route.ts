@@ -64,32 +64,35 @@ export async function POST(request: NextRequest) {
 
     const prompt = `You are a parenting expert helping families create age-appropriate chore lists. 
 
-Child Age: ${childAge} years old (${ageGroup})
+    Child Age: ${childAge} years old (${ageGroup})
 
-${existingChoresText}Please suggest 5 NEW age-appropriate chores that would be good for a ${childAge}-year-old child. Make sure the suggestions:
+    Existing family chores:
+    ${existingChoresText}
 
-1. Are developmentally appropriate for this age
-2. Don't duplicate existing family chores (suggest variations if similar chores exist)
-3. Include a mix of daily, weekly, and as-needed tasks
-4. Have reasonable monetary values based on effort and time required
-5. Build important life skills and responsibility
+    Please suggest 5 NEW age-appropriate chores. Make sure the suggestions:
 
-For each chore, consider:
-- Safety and physical capability at this age
-- Attention span and cognitive development
-- Building independence and confidence
-- Fair compensation for effort required
+    1. Are developmentally appropriate for this age
+    2. Don't duplicate existing family chores (suggest variations if similar chores exist)
+    3. Include a mix of daily, weekly, and as-needed tasks
+    4. Have reasonable monetary values based on effort and time required
+    5. Build important life skills and responsibility
 
-Respond with a JSON object containing:
-- suggestedChores: array of 5 chore objects with name, description, monetaryValue, recurrence, estimatedTimeMinutes, skillLevel, and category
-- ageGroup: string describing the developmental stage
-- reasoning: brief explanation of why these chores are appropriate for this age
+    For each chore, consider:
+    - Safety and physical capability at this age
+    - Attention span and cognitive development
+    - Building independence and confidence
+    - Fair compensation for effort required
 
-Recurrence options: "daily", "weekly", "biweekly", "monthly", "one_time", "as_needed"
-Skill levels: "beginner", "intermediate", "advanced"
-Categories: "cleaning", "organization", "kitchen", "outdoor", "pet_care", "laundry", "maintenance", "self_care"
+    Respond with a JSON object containing:
+    - suggestedChores: array of 5 chore objects with name, description, monetaryValue, recurrence, estimatedTimeMinutes, skillLevel, and category
+    - ageGroup: string describing the developmental stage
+    - reasoning: brief explanation of why these chores are appropriate for this age
 
-Make sure monetary values are realistic (typically $0.50 - $20.00 depending on age and task complexity).`;
+    Recurrence options: "daily", "weekly", "biweekly", "monthly", "one_time", "as_needed"
+    Skill levels: "beginner", "intermediate", "advanced"
+    Categories: "cleaning", "organization", "kitchen", "outdoor", "pet_care", "laundry", "maintenance", "self_care"
+
+    Make sure monetary values are realistic (typically $0.50 - $20.00 depending on age and task complexity) and aligned with the family's existing chores and their monetary values (if provided).`;
 
     console.log('🤖 Calling OpenAI for chore suggestions');
     console.log(`👶 Child age: ${childAge}`);
