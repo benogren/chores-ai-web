@@ -12,9 +12,27 @@ export default function Hero() {
             {/* Social Proof Badge */}
             <div className="social-proof-badge">
               <div className="flex -space-x-2">
-                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-purple-400 to-pink-400 border-2 border-white"></div>
-                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-teal-400 border-2 border-white"></div>
-                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-green-400 to-emerald-400 border-2 border-white"></div>
+                <Image
+                  src="/kate.jpeg"
+                  alt="Kate"
+                  width={24}
+                  height={24}
+                  className="rounded-full border-2 border-white"
+                />
+                <Image
+                  src="/Beau.jpeg"
+                  alt="Beau"
+                  width={24}
+                  height={24}
+                  className="rounded-full border-2 border-white"
+                />
+                <Image
+                  src="/courtney.jpeg"
+                  alt="Courtney"
+                  width={24}
+                  height={24}
+                  className="rounded-full border-2 border-white"
+                />
               </div>
               <span>Loved by thousands of families</span>
             </div>
@@ -31,7 +49,7 @@ export default function Hero() {
             <p className="text-xl text-gray-600 leading-relaxed max-w-md">
               Meet ChoresAI, the AI-powered app for easy family chore management. 
               Snap a photo, scan progress, or track completion and get instant 
-              payment and responsibility building.
+              credit and responsibility building.
             </p>
 
             <Waitlist />
