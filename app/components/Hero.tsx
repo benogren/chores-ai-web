@@ -13,21 +13,21 @@ export default function Hero() {
             <div className="social-proof-badge">
               <div className="flex -space-x-2">
                 <Image
-                  src="/kate.jpeg"
-                  alt="Kate"
+                  src="/Christy.jpg"
+                  alt="Christy"
                   width={24}
                   height={24}
                   className="rounded-full border-2 border-white"
                 />
                 <Image
-                  src="/Beau.jpeg"
-                  alt="Beau"
+                  src="/Ben.jpg"
+                  alt="Ben"
                   width={24}
                   height={24}
                   className="rounded-full border-2 border-white"
                 />
                 <Image
-                  src="/courtney.jpeg"
+                  src="/Courtney.jpg"
                   alt="Courtney"
                   width={24}
                   height={24}
