@@ -65,7 +65,7 @@ export default function MarketingFooter() {
         
         <div className="border-t border-gray-200 mt-8 pt-8 text-center">
           <p className="text-gray-500 text-sm">
-            &copy; 2024 ChoresAI. All rights reserved.
+            &copy; {new Date().getFullYear()} ChoresAI. All rights reserved.
           </p>
           <p className="text-gray-500 text-sm">
             Built with <Image src="/robot-heart.png" alt="Heart" width={25} height={25} className="inline-block mb-2" /> for modern families.
