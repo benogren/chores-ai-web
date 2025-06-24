@@ -93,8 +93,8 @@ export async function POST(request: NextRequest) {
   try {
     const url = new URL(request.url);
     
-    // Handle simulation for testing
-    if (url.pathname.endsWith('/simulate')) {
+    // Handle simulation for testing via query parameter
+    if (url.searchParams.get('simulate') === 'true') {
       console.log('🧪 Simulating App Store notification...');
       
       // Create a test user first
@@ -308,7 +308,7 @@ async function handleExpiration(transaction: TransactionInfo | null, renewal: Re
   if (!transaction) return;
 
   console.log(`⏰ Subscription expired: ${transaction.productId}`);
-  console.log('🔄 Renewal Info:', renewal);
+  console.log('- Renewal Info:', renewal);
   
   await updateUserSubscription({
     originalTransactionId: transaction.originalTransactionId,
