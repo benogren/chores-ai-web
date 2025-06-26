@@ -4,6 +4,7 @@ import Features from "./components/Features";
 import Benefits from "./components/Benefits";
 import Testimonials from "./components/Testimonials";
 import FinalCTA from "./components/FinalCTA";
+import NewFeature from "./components/NewFeature";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
     <Features />
     <Benefits />
     <Testimonials />
+    <NewFeature />
     <FinalCTA />
     </>
   );

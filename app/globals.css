@@ -21,6 +21,31 @@ body {
     overflow-x: hidden;
 }
 
+#animiate-pulse {
+  animation: var(--animate-pulse); /* pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite */
+
+  @keyframes pulse {
+    50% {
+      opacity: 0.5;
+    }
+  }
+}
+#animate-floating {
+  animation: var(--animate-floating); /* float 3s ease-in-out infinite */
+
+  @keyframes floating {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
 #getWaitlistContainer {
   padding: 0rem;
   margin-left: -20px;

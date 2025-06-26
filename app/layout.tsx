@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   title: 'ChoresAI - AI-Powered Family Chore Management',
   description: 'Transform household chores into an engaging experience with AI verification, digital rewards, and seamless family coordination.',
   keywords: ['chores', 'AI', 'family', 'kids', 'allowance', 'responsibility'],
-  authors: [{ name: 'ChoresAI Team', url: 'https://chores-ai.com' }],
+  authors: [{ name: 'ChoresAI', url: 'https://chores-ai.com' }],
   creator: 'ChoresAI',
   publisher: 'ChoresAI',
   robots: {
@@ -64,10 +64,10 @@ export const metadata: Metadata = {
     images: ['https://chores-ai-api.vercel.app/x-og-image.png'],
   },
   appLinks: {
-    // ios: {
-    //   url: 'https://chores-ai.com/ios',
-    //   app_store_id: 'app_store_id',
-    // },
+    ios: {
+      url: 'https://apps.apple.com/us/app/choresai-smart-family-tasks/id6747013648',
+      app_store_id: 'id6747013648',
+    },
     // android: {
     //   package: 'com.example.android/package',
     //   app_name: 'app_name_android',

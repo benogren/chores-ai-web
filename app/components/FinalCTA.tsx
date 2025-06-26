@@ -1,4 +1,5 @@
 // import Link from 'next/link'
+import AppButtons from './AppButtons';
 
 export default function FinalCTA() {
   return (
@@ -13,29 +14,11 @@ export default function FinalCTA() {
             Join thousands of families who&apos;ve discovered the joy of AI-powered 
             chore management. Start building responsibility and earning trust today.
           </p>
+
+          <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+          <AppButtons />
+          </div>
           
-          {/* App Store Buttons */}
-          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-            <Link href="#" className="app-store-button">
-              <div className="flex items-center gap-3">
-                <span className="text-2xl">📱</span>
-                <div className="text-left">
-                  <div className="text-xs opacity-80">Download on the</div>
-                  <div className="text-lg font-semibold">App Store</div>
-                </div>
-              </div>
-            </Link>
-            
-            <Link href="#" className="app-store-button google-play">
-              <div className="flex items-center gap-3">
-                <span className="text-2xl">▷</span>
-                <div className="text-left">
-                  <div className="text-xs opacity-80">GET IT ON</div>
-                  <div className="text-lg font-semibold">Google Play</div>
-                </div>
-              </div>
-            </Link>
-          </div> */}
 
           {/* Trust Badge */}
           {/* <div className="pt-8">

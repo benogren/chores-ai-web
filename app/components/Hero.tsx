@@ -1,6 +1,6 @@
-// import Link from 'next/link'
+
 import Image from 'next/image'
-import Waitlist from './Waitlist'
+import AppButtons from './AppButtons'
 
 export default function Hero() {
   return (
@@ -52,30 +52,12 @@ export default function Hero() {
               credit and responsibility building.
             </p>
 
-            <Waitlist />
+            {/* <Waitlist /> */}
 
             {/* App Store Buttons */}
-            {/* <div className="flex gap-4 pt-4">
-              <Link href="#" className="app-store-button">
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl">📱</span>
-                  <div className="text-left">
-                    <div className="text-xs opacity-80">Download on the</div>
-                    <div className="text-lg font-semibold">App Store</div>
-                  </div>
-                </div>
-              </Link>
-              
-              <Link href="#" className="app-store-button google-play">
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl">▷</span>
-                  <div className="text-left">
-                    <div className="text-xs opacity-80">GET IT ON</div>
-                    <div className="text-lg font-semibold">Google Play</div>
-                  </div>
-                </div>
-              </Link>
-            </div> */}
+            <AppButtons />
+            
+
           </div>
 
           {/* Right Column - Phone Mockups */}
@@ -86,7 +68,7 @@ export default function Hero() {
                   alt="ChoresAI App Mockup"
                   width={750}
                   height={591}
-                  className='cover object-contain max-w-full h-auto animate-float'
+                  className='cover object-contain max-w-full h-auto'
                 />  
             </div>
           </div>
