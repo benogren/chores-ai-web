@@ -20,6 +20,13 @@ const features = [
     icon: '📸'
   },
   {
+    id: 'age-appropriate',
+    title: 'Age-Appropriate Tasks',
+    description: 'ChoresAI suggests tasks tailored to each child\'s age and abilities. From simple chores for toddlers to complex tasks for teens, we help build responsibility step by step.',
+    image: '/choresai-age.png',
+    icon: '👶'
+  },
+  {
     id: 'digital-wallets',
     title: 'Smart Digital Wallets',
     description: 'Automatic payments to kids\' digital wallets upon chore completion. Track earnings, spending, and teach financial responsibility effortlessly.',
@@ -32,14 +39,14 @@ const features = [
     description: 'Complete visibility and control over chore assignments, AI decisions, and family progress. Review, approve, or adjust any chore completion.',
     image: '/choresai-parent.png',
     icon: '👨‍👩‍👧‍👦'
-  },
-  {
-    id: 'progress-tracking',
-    title: 'Family Progress Tracking',
-    description: 'Monitor your family\'s chore completion rates, earnings trends, and achievement milestones. Celebrate success and identify areas for improvement.',
-    image: '/choresai-progress.png',
-    icon: '📊'
   }
+  // {
+  //   id: 'progress-tracking',
+  //   title: 'Family Progress Tracking',
+  //   description: 'Monitor your family\'s chore completion rates, earnings trends, and achievement milestones. Celebrate success and identify areas for improvement.',
+  //   image: '/choresai-progress.png',
+  //   icon: '📊'
+  // }
 ]
 
 interface FeatureCardProps {
